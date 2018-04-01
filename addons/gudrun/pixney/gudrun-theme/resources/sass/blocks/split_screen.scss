@@ -1,0 +1,26 @@
+.block--split_screen_block
+{
+   margin:0;
+   border-bottom:1px solid #eee;
+    .pr0
+    {
+        padding-right: 0;
+    }
+    .pl0
+    {
+        padding-left: 0;
+    }
+
+
+    .image img
+    {
+        width: 100%;
+        height: 100vh;
+
+        object-fit: cover;
+    }
+    .content
+    {
+        padding: 50px;
+    }
+}

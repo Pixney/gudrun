@@ -1,0 +1,14 @@
+.env
+.coverage
+composer.lock
+/bin
+/core
+/build
+/vendor
+/coverage
+/node_modules
+/bower_components
+/addons/gudrun/pixney/split_column_block-extension
+/addons/gudrun/pixney/split_screen_block-extension
+/addons/gudrun/pixney/three_columns_block-extension
+/addons/gudrun/pixney/two_columns_block-extension

@@ -1,0 +1,57 @@
+{#% htmlcompress %#}
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="nojs ms lt_ie7" lang="en"><![endif]-->
+<!--[if IE 7]> <html class="nojs ms ie7" lang="en"><![endif]-->
+<!--[if IE 8]> <html class="nojs ms ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]> <html class="nojs ms" lang="en"><![endif]-->
+
+<html>
+
+    <head>
+        {% include "theme::partials/metadata" %}
+    </head>
+
+    <body>
+        <div id="app">
+
+            <vue-drawer-layout ref="drawer" :drawer-width="300" :backdrop-opacity-range="[0,0.2]" :content-drawable="true" :enable="true">
+                <div class="drawer-content" slot="drawer">
+                    {% include "theme::partials/header" %}
+                    <a href="javascript:void(0)" class="btn" @click="handleToggleDrawer">Show Drawer</a>
+                </div>
+                <div slot="content" class="content">
+                    <div class="">
+                        {# <a href="javascript:void(0)" class="btn" @click="handleToggleDrawer">Show Drawer</a> #}
+
+                        {% include "theme::partials/messages" %}
+                        {{ page.content_blocks.render()|raw }}
+                        
+
+                        {# {% block content %}{% endblock %} #}
+                    </div>
+                </div>
+            </vue-drawer-layout>
+
+        </div>
+        {% include "theme::partials/assets" %}
+    </body>
+</html>
+{#% endhtmlcompress %#}
+
+{#
+{% include "theme::partials/header" %}
+
+<main id="main">
+    <div class="container">
+
+        {% include "theme::partials/messages" %}
+
+        {% block content %}{% endblock %}
+
+    </div>
+</main>
+
+{% include "theme::partials/footer" %}
+{% include "theme::partials/assets" %}
+#}

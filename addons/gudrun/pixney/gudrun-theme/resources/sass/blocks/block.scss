@@ -1,0 +1,45 @@
+.block
+{
+    @media (min-width: 992px)
+    {
+        margin: 75px 0;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    margin: 20px 0;
+}
+p
+{
+    margin-bottom: 0;
+}
+p + p
+{
+    margin-top: 30px;
+}
+.block--three_columns_block,
+.block--two_columns_block
+{
+    p:last-child
+    {
+        margin-bottom: 75px;
+    }
+
+    @media (min-width: 768px)
+    {
+        p:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@import 'two_columns';
+@import 'three_columns';
+@import 'split_screen';
+@import 'split_column';
