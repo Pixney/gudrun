@@ -43,6 +43,19 @@
 
 {# Include Asset Collections #}
 <style type="text/css">
+
+{% for block in page.content_blocks %}
+    {% if block.extension.value.slug == 'spotlight_block' %}
+
+#block--{{block.id}} .content
+{
+    background : {{block.background | raw}};
+    color : {{block.color | raw}};
+}
+
+    {% endif %}
+{% endfor %}
+
 {#{ asset_inline("theme.css") }#}
 {#{ asset_inline("build.css", ["parse", "min"])#}
 </style> 
